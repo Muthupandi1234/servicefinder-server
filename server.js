@@ -11,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => res.json({ message: '✅ ServiceFinder API Running!' }));
 app.use('/api/bookings', require('./routes/bookingRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'))
 app.use('/api/auth',     require('./routes/authRoutes'));
